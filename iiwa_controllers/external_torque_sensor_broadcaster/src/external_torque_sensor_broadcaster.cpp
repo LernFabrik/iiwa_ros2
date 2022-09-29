@@ -28,13 +28,13 @@ CallbackReturn ExternalTorqueSensorBroadcaster::on_init()
 {
   try {
     auto_declare<std::string>("sensor_name", "");
-    auto_declare<std::string>("interface_names.joint_a1", "");
-    auto_declare<std::string>("interface_names.joint_a2", "");
-    auto_declare<std::string>("interface_names.joint_a3", "");
-    auto_declare<std::string>("interface_names.joint_a4", "");
-    auto_declare<std::string>("interface_names.joint_a5", "");
-    auto_declare<std::string>("interface_names.joint_a6", "");
-    auto_declare<std::string>("interface_names.joint_a7", "");
+    auto_declare<std::string>("interface_names.iiwa7_joint_1", "");
+    auto_declare<std::string>("interface_names.iiwa7_joint_2", "");
+    auto_declare<std::string>("interface_names.iiwa7_joint_3", "");
+    auto_declare<std::string>("interface_names.iiwa7_joint_4", "");
+    auto_declare<std::string>("interface_names.iiwa7_joint_5", "");
+    auto_declare<std::string>("interface_names.iiwa7_joint_6", "");
+    auto_declare<std::string>("interface_names.iiwa7_joint_7", "");
 
   } catch (const std::exception & e) {
     fprintf(stderr, "Exception thrown during init stage with message: %s \n", e.what());
@@ -48,13 +48,13 @@ CallbackReturn ExternalTorqueSensorBroadcaster::on_configure(
   const rclcpp_lifecycle::State & /*previous_state*/)
 {
   sensor_name_ = get_node()->get_parameter("sensor_name").as_string();
-  interface_names_[0] = get_node()->get_parameter("interface_names.joint_a1").as_string();
-  interface_names_[1] = get_node()->get_parameter("interface_names.joint_a2").as_string();
-  interface_names_[2] = get_node()->get_parameter("interface_names.joint_a3").as_string();
-  interface_names_[3] = get_node()->get_parameter("interface_names.joint_a4").as_string();
-  interface_names_[4] = get_node()->get_parameter("interface_names.joint_a5").as_string();
-  interface_names_[5] = get_node()->get_parameter("interface_names.joint_a6").as_string();
-  interface_names_[6] = get_node()->get_parameter("interface_names.joint_a7").as_string();
+  interface_names_[0] = get_node()->get_parameter("interface_names.iiwa7_joint_1").as_string();
+  interface_names_[1] = get_node()->get_parameter("interface_names.iiwa7_joint_2").as_string();
+  interface_names_[2] = get_node()->get_parameter("interface_names.iiwa7_joint_3").as_string();
+  interface_names_[3] = get_node()->get_parameter("interface_names.iiwa7_joint_4").as_string();
+  interface_names_[4] = get_node()->get_parameter("interface_names.iiwa7_joint_5").as_string();
+  interface_names_[5] = get_node()->get_parameter("interface_names.iiwa7_joint_6").as_string();
+  interface_names_[6] = get_node()->get_parameter("interface_names.iiwa7_joint_7").as_string();
 
   const bool no_interface_names_defined =
     std::count(interface_names_.begin(), interface_names_.end(), "") == 7;

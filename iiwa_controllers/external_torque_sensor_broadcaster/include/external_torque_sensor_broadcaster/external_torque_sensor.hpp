@@ -33,13 +33,13 @@ public:
   : SemanticComponentInterface(name, 7)
   {
     // If ETS use standard names
-    interface_names_.emplace_back(name_ + "/" + "external_torque.joint_a1");
-    interface_names_.emplace_back(name_ + "/" + "external_torque.joint_a2");
-    interface_names_.emplace_back(name_ + "/" + "external_torque.joint_a3");
-    interface_names_.emplace_back(name_ + "/" + "external_torque.joint_a4");
-    interface_names_.emplace_back(name_ + "/" + "external_torque.joint_a5");
-    interface_names_.emplace_back(name_ + "/" + "external_torque.joint_a6");
-    interface_names_.emplace_back(name_ + "/" + "external_torque.joint_a7");
+    interface_names_.emplace_back(name_ + "/" + "external_torque.iiwa7_joint_1");
+    interface_names_.emplace_back(name_ + "/" + "external_torque.iiwa7_joint_2");
+    interface_names_.emplace_back(name_ + "/" + "external_torque.iiwa7_joint_3");
+    interface_names_.emplace_back(name_ + "/" + "external_torque.iiwa7_joint_4");
+    interface_names_.emplace_back(name_ + "/" + "external_torque.iiwa7_joint_5");
+    interface_names_.emplace_back(name_ + "/" + "external_torque.iiwa7_joint_6");
+    interface_names_.emplace_back(name_ + "/" + "external_torque.iiwa7_joint_7");
 
     // Set all interfaces existing
     std::fill(existing_axes_.begin(), existing_axes_.end(), true);
